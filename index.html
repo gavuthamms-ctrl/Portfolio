@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gavutham MS — Portfolio Website</title>
-  
+
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Portfolio of Gavutham MS — Software Developer & Cybersecurity Learner. Computer Science Engineering student building intelligent software systems.">
-  <meta name="keywords" content="Gavutham MS, Gavutham, Portfolio, Software Developer, Cybersecurity, Python Developer, PACET Pollachi">
+  <meta name="description"
+    content="Portfolio of Gavutham MS — Software Developer & Cybersecurity Learner. Computer Science Engineering student building intelligent software systems.">
+  <meta name="keywords"
+    content="Gavutham MS, Gavutham, Portfolio, Software Developer, Cybersecurity, Python Developer, PACET Pollachi">
   <meta name="author" content="Gavutham MS">
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet">
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
+
   <!-- Typed.js for text animation -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
@@ -25,49 +30,59 @@
     /* ─── DESIGN SYSTEM VARIABLES ─── */
     :root {
       /* Backgrounds */
-      --bg-primary:     #080C10;   /* Deep navy-black — main background */
-      --bg-secondary:   #0D1117;   /* GitHub dark — section alternates */
-      --bg-card:        #0F1923;   /* Card backgrounds */
-      --bg-glass:       rgba(15, 25, 35, 0.65); /* Premium glassmorphism */
+      --bg-primary: #080C10;
+      /* Deep navy-black — main background */
+      --bg-secondary: #0D1117;
+      /* GitHub dark — section alternates */
+      --bg-card: #0F1923;
+      /* Card backgrounds */
+      --bg-glass: rgba(15, 25, 35, 0.65);
+      /* Premium glassmorphism */
 
       /* Accent System */
-      --accent-primary:  #00D9FF;  /* Electric cyan — primary highlights */
-      --accent-secondary:#0066FF;  /* Deep blue — gradients, secondary */
-      --accent-glow:     rgba(0, 217, 255, 0.15); /* Ambient glow */
+      --accent-primary: #00D9FF;
+      /* Electric cyan — primary highlights */
+      --accent-secondary: #0066FF;
+      /* Deep blue — gradients, secondary */
+      --accent-glow: rgba(0, 217, 255, 0.15);
+      /* Ambient glow */
 
       /* Typography colors */
-      --text-primary:   #F0F6FC;   /* Near-white — headings */
-      --text-secondary: #8B949E;   /* Muted — body text */
-      --text-accent:    #00D9FF;   /* Cyan — highlighted words */
+      --text-primary: #F0F6FC;
+      /* Near-white — headings */
+      --text-secondary: #8B949E;
+      /* Muted — body text */
+      --text-accent: #00D9FF;
+      /* Cyan — highlighted words */
 
       /* Borders */
-      --border-subtle:  rgba(0, 217, 255, 0.1);
-      --border-active:  rgba(0, 217, 255, 0.45);
+      --border-subtle: rgba(0, 217, 255, 0.1);
+      --border-active: rgba(0, 217, 255, 0.45);
 
       /* Status */
-      --success:        #3FB950;
-      --warning:        #D29922;
+      --success: #3FB950;
+      --warning: #D29922;
 
       /* Fonts */
-      --font-display:  'Syne', sans-serif;
-      --font-body:     'DM Sans', sans-serif;
-      --font-mono:     'JetBrains Mono', monospace;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
 
       /* Spacing & Radii */
-      --space-xs:   4px;
-      --space-sm:   8px;
-      --space-md:   16px;
-      --space-lg:   32px;
-      --space-xl:   64px;
-      --space-2xl:  96px;
-      --space-3xl:  128px;
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 32px;
+      --space-xl: 64px;
+      --space-2xl: 96px;
+      --space-3xl: 128px;
 
-      --radius-sm:  6px;
-      --radius-md:  12px;
-      --radius-lg:  20px;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
       --radius-pill: 999px;
 
-      --max-width:  1200px;
+      --max-width: 1200px;
     }
 
     /* ─── BASE RESET & STYLES ─── */
@@ -107,14 +122,17 @@
     ::-webkit-scrollbar {
       width: 10px;
     }
+
     ::-webkit-scrollbar-track {
       background: var(--bg-primary);
     }
+
     ::-webkit-scrollbar-thumb {
       background: #1F2937;
       border-radius: var(--radius-sm);
       border: 2px solid var(--bg-primary);
     }
+
     ::-webkit-scrollbar-thumb:hover {
       background: var(--accent-primary);
     }
@@ -137,6 +155,7 @@
       mix-blend-mode: screen;
       display: none;
     }
+
     @media (hover: hover) {
       .cursor-glow {
         display: block;
@@ -192,6 +211,7 @@
       color: #080C10;
       border: 1px solid var(--accent-primary);
     }
+
     .btn-primary:hover {
       box-shadow: 0 0 25px var(--accent-primary);
       transform: translateY(-2px);
@@ -202,6 +222,7 @@
       color: var(--text-primary);
       border: 1px solid var(--border-subtle);
     }
+
     .btn-ghost:hover {
       border-color: var(--accent-primary);
       color: var(--accent-primary);
@@ -242,6 +263,7 @@
       transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
       will-change: transform, opacity;
     }
+
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
@@ -388,7 +410,8 @@
       color: var(--text-secondary);
     }
 
-    .mobile-menu a:hover, .mobile-menu a.active {
+    .mobile-menu a:hover,
+    .mobile-menu a.active {
       color: var(--accent-primary);
     }
 
@@ -397,7 +420,8 @@
       position: relative;
       height: 100vh;
       width: 100%;
-      background-color: #000000;  /* Pure black contrast */
+      background-color: #000000;
+      /* Pure black contrast */
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -420,13 +444,11 @@
       bottom: -15%;
       width: 160%;
       height: 75%;
-      background: radial-gradient(
-        ellipse at bottom center,
-        rgba(20, 60, 160, 0.45) 0%,
-        rgba(10, 30, 90, 0.25) 30%,
-        rgba(5, 10, 40, 0.10) 60%,
-        rgba(0, 0, 0, 0) 80%
-      );
+      background: radial-gradient(ellipse at bottom center,
+          rgba(20, 60, 160, 0.45) 0%,
+          rgba(10, 30, 90, 0.25) 30%,
+          rgba(5, 10, 40, 0.10) 60%,
+          rgba(0, 0, 0, 0) 80%);
       filter: blur(40px);
       animation: gemini-breathe-ambient 9s ease-in-out infinite alternate;
     }
@@ -436,13 +458,11 @@
       bottom: -25%;
       width: 80%;
       height: 60%;
-      background: radial-gradient(
-        ellipse at bottom center,
-        rgba(30, 80, 200, 0.55) 0%,
-        rgba(15, 50, 140, 0.30) 35%,
-        rgba(5, 15, 60, 0.10) 65%,
-        rgba(0, 0, 0, 0) 85%
-      );
+      background: radial-gradient(ellipse at bottom center,
+          rgba(30, 80, 200, 0.55) 0%,
+          rgba(15, 50, 140, 0.30) 35%,
+          rgba(5, 15, 60, 0.10) 65%,
+          rgba(0, 0, 0, 0) 85%);
       filter: blur(60px);
       animation: gemini-breathe-hotspot 9s ease-in-out infinite alternate;
       animation-delay: -1.5s;
@@ -454,14 +474,17 @@
         transform: translateX(-50%) translateY(0%) scale(1);
         opacity: 0.75;
       }
+
       40% {
         transform: translateX(-50%) translateY(-4%) scale(1.04);
         opacity: 1;
       }
+
       70% {
         transform: translateX(-50%) translateY(-2%) scale(1.02);
         opacity: 0.90;
       }
+
       100% {
         transform: translateX(-50%) translateY(3%) scale(0.96);
         opacity: 0.70;
@@ -474,14 +497,17 @@
         transform: translateX(-50%) translateY(2%) scale(0.97);
         opacity: 0.65;
       }
+
       35% {
         transform: translateX(-50%) translateY(-5%) scale(1.06);
         opacity: 1;
       }
+
       75% {
         transform: translateX(-50%) translateY(-3%) scale(1.03);
         opacity: 0.85;
       }
+
       100% {
         transform: translateX(-50%) translateY(4%) scale(0.94);
         opacity: 0.60;
@@ -530,10 +556,12 @@
         transform: scale(0.95);
         box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.7);
       }
+
       70% {
         transform: scale(1);
         box-shadow: 0 0 0 6px rgba(63, 185, 80, 0);
       }
+
       100% {
         transform: scale(0.95);
         box-shadow: 0 0 0 0 rgba(63, 185, 80, 0);
@@ -589,16 +617,20 @@
       .hero-content {
         padding-top: 40px;
       }
+
       .status-badge {
         margin-bottom: var(--space-sm);
       }
+
       .hero-title {
         font-size: clamp(28px, 5.5vw, 46px);
         margin-bottom: var(--space-xs);
       }
+
       .hero-typed {
         margin-bottom: var(--space-sm);
       }
+
       .hero-desc {
         margin-bottom: var(--space-md);
       }
@@ -630,12 +662,19 @@
     }
 
     @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
         transform: translate(-50%, 0);
       }
+
       40% {
         transform: translate(-50%, -10px);
       }
+
       60% {
         transform: translate(-50%, -5px);
       }
@@ -918,6 +957,7 @@
       0% {
         transform: translateX(0);
       }
+
       100% {
         transform: translateX(-50%);
       }
@@ -950,9 +990,17 @@
       width: 100%;
     }
 
-    .p1-strip { background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); }
-    .p2-strip { background: linear-gradient(90deg, #3FB950, #00D9FF); }
-    .p3-strip { background: linear-gradient(90deg, #A855F7, #0066FF); }
+    .p1-strip {
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    }
+
+    .p2-strip {
+      background: linear-gradient(90deg, #3FB950, #00D9FF);
+    }
+
+    .p3-strip {
+      background: linear-gradient(90deg, #A855F7, #0066FF);
+    }
 
     .project-body {
       padding: var(--space-lg);
@@ -1204,7 +1252,8 @@
       gap: var(--space-md);
     }
 
-    .certs-title, .hackathons-title {
+    .certs-title,
+    .hackathons-title {
       font-family: var(--font-display);
       font-size: 24px;
       font-weight: 700;
@@ -1214,7 +1263,8 @@
       gap: 12px;
     }
 
-    .certs-title i, .hackathons-title i {
+    .certs-title i,
+    .hackathons-title i {
       color: var(--accent-primary);
       font-size: 20px;
     }
@@ -1486,8 +1536,13 @@
       background: var(--border-subtle);
     }
 
-    .direct-connect h4::before { left: 15%; }
-    .direct-connect h4::after { right: 15%; }
+    .direct-connect h4::before {
+      left: 15%;
+    }
+
+    .direct-connect h4::after {
+      right: 15%;
+    }
 
     .direct-grid {
       display: flex;
@@ -1605,7 +1660,8 @@
         padding: var(--space-2xl) 0;
       }
 
-      .nav-links, .btn-nav-hire {
+      .nav-links,
+      .btn-nav-hire {
         display: none;
       }
 
@@ -1619,7 +1675,8 @@
       }
 
       .about-visual {
-        order: -1; /* image on top in mobile */
+        order: -1;
+        /* image on top in mobile */
       }
 
       .achievements-grid {
@@ -1640,18 +1697,24 @@
         opacity: 1;
         transform: none;
       }
-      .glow-ambient, .glow-hotspot, .pulse-dot {
+
+      .glow-ambient,
+      .glow-hotspot,
+      .pulse-dot {
         animation: none;
       }
+
       .scroll-indicator {
         animation: fadeIn 0.5s forwards;
       }
+
       .cursor-glow {
         display: none !important;
       }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Custom Cursor Glow -->
@@ -1664,7 +1727,7 @@
         <span class="logo-badge">G</span>
         <span>Gavutham</span>
       </a>
-      
+
       <ul class="nav-links">
         <li><a href="#about" class="nav-item">About</a></li>
         <li><a href="#skills" class="nav-item">Skills</a></li>
@@ -1711,13 +1774,16 @@
       </div>
 
       <p class="hero-desc">
-        Second-year CSE student at PACET Pollachi. I build real-world software — from AI systems to optimization algorithms. Currently freelancing and actively seeking internship opportunities.
+        Second-year CSE student at PACET Pollachi. I build real-world software — from AI systems to optimization
+        algorithms. Currently freelancing and actively seeking internship opportunities.
       </p>
 
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-primary">Contact Me <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/gavuthamms" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i
+            class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/gavuthamms" target="_blank" rel="noopener noreferrer"
+          class="btn btn-ghost"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
       </div>
     </div>
 
@@ -1734,15 +1800,19 @@
           <span class="section-label">// 01 — ABOUT ME</span>
           <h2 class="section-title">The Person Behind<br>the Code.</h2>
           <p>
-            I'm Gavutham MS, a Computer Science Engineering student at P A College of Engineering and Technology, Pollachi — Batch 2025–2029.
+            I'm Gavutham MS, a Computer Science Engineering student at P A College of Engineering and Technology,
+            Pollachi — Batch 2025–2029.
           </p>
           <p>
-            I don't wait to be taught — I build to learn. My projects aren't assignments, they're answers to real problems I noticed around me: people spending hours formatting resumes, delivery systems wasting fuel, and volunteers being mismatched with community disaster tasks.
+            I don't wait to be taught — I build to learn. My projects aren't assignments, they're answers to real
+            problems I noticed around me: people spending hours formatting resumes, delivery systems wasting fuel, and
+            volunteers being mismatched with community disaster tasks.
           </p>
           <p>
-            I work at the intersection of software and systems thinking. Whether it's training an ML model, designing a modern responsive UI, or optimizing a graph-routing algorithm, I care about the outcome — not just the code.
+            I work at the intersection of software and systems thinking. Whether it's training an ML model, designing a
+            modern responsive UI, or optimizing a graph-routing algorithm, I care about the outcome — not just the code.
           </p>
-          
+
           <div class="skill-pills">
             <span class="skill-pill">Python</span>
             <span class="skill-pill">JavaScript</span>
@@ -1756,7 +1826,8 @@
         <div class="about-visual">
           <div class="profile-frame">
             <!-- Renders user's actual photo copied to portfolio/profile.jpg. Fallback provided. -->
-            <img src="profile.jpg" alt="Gavutham MS" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <img src="profile.jpg" alt="Gavutham MS" class="profile-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="profile-placeholder" style="display:none;">GM</div>
           </div>
 
@@ -1823,7 +1894,7 @@
       </div>
 
       <h3 class="domain-title">Areas of Focus</h3>
-      
+
       <!-- Domain wide cards -->
       <div class="domains-grid">
         <div class="card domain-card">
@@ -1838,7 +1909,8 @@
           <i class="fa-solid fa-laptop-code"></i>
           <div class="domain-info">
             <h4>Web Development</h4>
-            <p>Developing robust dynamic layouts and highly interactive frontend interfaces with clean usability design.</p>
+            <p>Developing robust dynamic layouts and highly interactive frontend interfaces with clean usability design.
+            </p>
           </div>
         </div>
 
@@ -1846,7 +1918,8 @@
           <i class="fa-solid fa-route"></i>
           <div class="domain-info">
             <h4>Algorithm Design</h4>
-            <p>Engineering complex matching models, location batched clustering, and optimized delivery routing paths.</p>
+            <p>Engineering complex matching models, location batched clustering, and optimized delivery routing paths.
+            </p>
           </div>
         </div>
 
@@ -1905,21 +1978,25 @@
             </div>
             <h3 class="project-title">AI Resume Analyser</h3>
             <p class="project-one-liner">Gives your resume an honest, structured second opinion.</p>
-            
+
             <div class="project-divider"></div>
-            
+
             <div class="project-spec">
               <strong>The Problem</strong>
-              <p>Most job applicants submit resumes without knowing what critical highlights are missing, leading to silent rejections.</p>
+              <p>Most job applicants submit resumes without knowing what critical highlights are missing, leading to
+                silent rejections.</p>
             </div>
             <div class="project-spec">
               <strong>The Outcome</strong>
-              <p>A smart evaluation tool that scans text, highlights critical resume deficiencies, and details recommended keywords.</p>
+              <p>A smart evaluation tool that scans text, highlights critical resume deficiencies, and details
+                recommended keywords.</p>
             </div>
 
             <div class="project-actions">
-              <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
-              <button class="btn btn-primary open-details-btn" data-project="p1">Details <i class="fa-solid fa-arrow-right-long"></i></button>
+              <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer"
+                class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+              <button class="btn btn-primary open-details-btn" data-project="p1">Details <i
+                  class="fa-solid fa-arrow-right-long"></i></button>
             </div>
           </div>
         </div>
@@ -1936,16 +2013,17 @@
             </div>
             <h3 class="project-title">Green Delivery Optimizer</h3>
             <p class="project-one-liner">Smarter routing that saves fuel and the planet.</p>
-            
+
             <div class="project-divider"></div>
-            
+
             <div class="project-spec">
               <strong>The Problem</strong>
               <p>E-commerce delivery routes are highly scattered, generating massive unnecessary transit fuel waste.</p>
             </div>
             <div class="project-spec">
               <strong>The Outcome</strong>
-              <p>An eco-friendly dispatch batcher system, offering batched deliveries that significantly cut net exhaust emissions.</p>
+              <p>An eco-friendly dispatch batcher system, offering batched deliveries that significantly cut net exhaust
+                emissions.</p>
             </div>
 
             <div class="project-badge">
@@ -1953,8 +2031,10 @@
             </div>
 
             <div class="project-actions">
-              <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
-              <button class="btn btn-primary open-details-btn" data-project="p2">Details <i class="fa-solid fa-arrow-right-long"></i></button>
+              <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer"
+                class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+              <button class="btn btn-primary open-details-btn" data-project="p2">Details <i
+                  class="fa-solid fa-arrow-right-long"></i></button>
             </div>
           </div>
         </div>
@@ -1971,16 +2051,18 @@
             </div>
             <h3 class="project-title">Smart Resource Allocator</h3>
             <p class="project-one-liner">The right volunteer for the right task — automatically.</p>
-            
+
             <div class="project-divider"></div>
-            
+
             <div class="project-spec">
               <strong>The Problem</strong>
-              <p>Disaster response logistics assign helper tasks completely randomly, failing to match volunteers with actual core skills.</p>
+              <p>Disaster response logistics assign helper tasks completely randomly, failing to match volunteers with
+                actual core skills.</p>
             </div>
             <div class="project-spec">
               <strong>The Outcome</strong>
-              <p>A smart algorithm that ranks candidate helpers by proximity, response history, and expertise for matching.</p>
+              <p>A smart algorithm that ranks candidate helpers by proximity, response history, and expertise for
+                matching.</p>
             </div>
 
             <div class="project-badge">
@@ -1988,8 +2070,10 @@
             </div>
 
             <div class="project-actions">
-              <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
-              <button class="btn btn-primary open-details-btn" data-project="p3">Details <i class="fa-solid fa-arrow-right-long"></i></button>
+              <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer"
+                class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+              <button class="btn btn-primary open-details-btn" data-project="p3">Details <i
+                  class="fa-solid fa-arrow-right-long"></i></button>
             </div>
           </div>
         </div>
@@ -2024,7 +2108,8 @@
         </div>
 
         <div class="modal-footer">
-          <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="modalGithub"><i class="fa-brands fa-github"></i> View Repository</a>
+          <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+            id="modalGithub"><i class="fa-brands fa-github"></i> View Repository</a>
           <button class="btn btn-ghost" id="modalCloseBtn">Close</button>
         </div>
       </div>
@@ -2041,7 +2126,7 @@
         <!-- Certifications Column -->
         <div class="certs-col">
           <h3 class="certs-title"><i class="fa-solid fa-award"></i> Professional Certifications</h3>
-          
+
           <!-- Cert 1 -->
           <div class="card cert-card">
             <i class="fa-solid fa-certificate cert-icon"></i>
@@ -2085,7 +2170,8 @@
             </div>
             <h4>TNIMPACT Hackathon</h4>
             <p class="hack-project">
-              Pioneered route consolidation algorithms within the <strong>Green Delivery Optimization</strong> platform, earning key commendations for operational logistics solutions.
+              Pioneered route consolidation algorithms within the <strong>Green Delivery Optimization</strong> platform,
+              earning key commendations for operational logistics solutions.
             </p>
           </div>
 
@@ -2097,7 +2183,8 @@
             </div>
             <h4>Build With AI Hackathon</h4>
             <p class="hack-project">
-              Designed state-of-the-art dispatch protocols for <strong>Smart Resource Allocation</strong>, applying NLP parsing to map live volunteer inputs to disaster needs.
+              Designed state-of-the-art dispatch protocols for <strong>Smart Resource Allocation</strong>, applying NLP
+              parsing to map live volunteer inputs to disaster needs.
             </p>
           </div>
         </div>
@@ -2108,42 +2195,49 @@
   <!-- SECTION 6: CONTACT -->
   <section id="contact">
     <div class="contact-glow-bg"></div>
-    
+
     <div class="container reveal">
       <div class="contact-wrap">
         <div class="contact-form-card card">
-          
+
           <!-- Contact form inputs -->
           <form class="contact-form" id="contactForm" action="https://formspree.io/f/mojblbkv" method="POST">
             <div style="text-align: center; margin-bottom: var(--space-md);">
               <span class="section-label">// 05 — CONTACT</span>
-              <h2 class="section-title" style="font-size: clamp(28px, 4vw, 42px); margin-bottom: 8px;">Let's Build Something Impactful.</h2>
-              <p style="color: var(--text-secondary); font-size: 14.5px;">Whether you have an internship opportunity, a freelance project, or just want to talk tech — I'm ready.</p>
+              <h2 class="section-title" style="font-size: clamp(28px, 4vw, 42px); margin-bottom: 8px;">Let's Build
+                Something Impactful.</h2>
+              <p style="color: var(--text-secondary); font-size: 14.5px;">Whether you have an internship opportunity, a
+                freelance project, or just want to talk tech — I'm ready.</p>
             </div>
 
             <div class="form-group">
               <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required autocomplete="name">
+              <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required
+                autocomplete="name">
             </div>
 
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email">
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required
+                autocomplete="email">
             </div>
 
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" class="form-input" placeholder="Tell me about the opportunity or project..." required></textarea>
+              <textarea id="message" name="message" class="form-input"
+                placeholder="Tell me about the opportunity or project..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="margin-top: 10px; width: 100%; height: 50px;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px; width: 100%; height: 50px;">Send
+              Message <i class="fa-solid fa-paper-plane"></i></button>
           </form>
 
           <!-- Dynamic Success Screen overlay -->
           <div class="form-success-overlay" id="successOverlay">
             <div class="success-icon"><i class="fa-solid fa-check"></i></div>
             <h3 class="success-title">Message Sent!</h3>
-            <p class="success-text">Thank you for reaching out. I've received your request and will get back to you shortly.</p>
+            <p class="success-text">Thank you for reaching out. I've received your request and will get back to you
+              shortly.</p>
             <button class="btn btn-ghost" id="successReset">Send Another Message</button>
           </div>
 
@@ -2156,7 +2250,8 @@
             <a href="mailto:gavutham.ms@gmail.com" class="direct-link">
               <i class="fa-solid fa-envelope"></i> gavutham.ms@gmail.com
             </a>
-            <a href="https://www.linkedin.com/in/gavuthamms" target="_blank" rel="noopener noreferrer" class="direct-link">
+            <a href="https://www.linkedin.com/in/gavuthamms" target="_blank" rel="noopener noreferrer"
+              class="direct-link">
               <i class="fa-brands fa-linkedin"></i> linkedin.com/in/gavuthamms
             </a>
             <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer" class="direct-link">
@@ -2180,9 +2275,12 @@
       <p class="footer-quote">"I build things to understand them."</p>
 
       <div class="footer-socials">
-        <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/gavuthamms" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="mailto:gavutham.ms@gmail.com" class="footer-social-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer"
+          class="footer-social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/gavuthamms" target="_blank" rel="noopener noreferrer"
+          class="footer-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:gavutham.ms@gmail.com" class="footer-social-icon" aria-label="Email"><i
+            class="fa-solid fa-envelope"></i></a>
       </div>
 
       <p class="footer-copy">
@@ -2213,7 +2311,7 @@
 
     // ─── CUSTOM INTERACTIVE CURSOR GLOW ───
     const cursorGlow = document.getElementById('cursorGlow');
-    
+
     if (cursorGlow) {
       document.addEventListener('mousemove', (e) => {
         // Direct placement
@@ -2286,7 +2384,7 @@
     // ─── MOBILE NAVBAR HAMBURGER TOGGLE ───
     const navToggle = document.getElementById('navToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-    
+
     navToggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('active');
       const icon = navToggle.querySelector('i');
@@ -2314,7 +2412,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          
+
           // Animate statistics counter specifically inside About section
           if (entry.target.querySelector('.about-grid')) {
             animateStats();
@@ -2443,27 +2541,27 @@
 
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const formData = new FormData(contactForm);
       const nameVal = document.getElementById('name').value;
       const emailVal = document.getElementById('email').value;
       const messageVal = document.getElementById('message').value;
-      
+
       const triggerEmailFallback = (statusDetail = '') => {
         const subject = `Contact from ${nameVal} via Portfolio`;
         const body = `Name: ${nameVal}\nEmail: ${emailVal}\n\nMessage:\n${messageVal}`;
         const confirmMsg = `Oops! There was a problem submitting your form via Formspree${statusDetail}.\n\nThis usually happens if your Formspree Form ID (mojblbkv) is not yet active, has exceeded submission limits, or needs validation on Formspree.io.\n\nWould you like to open Gmail Web to send your message directly to gavutham.ms@gmail.com instead?`;
-        
+
         if (confirm(confirmMsg)) {
           const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=gavutham.ms@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
           window.open(gmailUrl, '_blank');
-          
+
           // Clear inputs and transition contact form to success state immediately
           successOverlay.classList.add('active');
           contactForm.reset();
         }
       };
-      
+
       // Submit visually via AJAX to Formspree
       fetch(contactForm.action, {
         method: 'POST',
@@ -2472,28 +2570,28 @@
           'Accept': 'application/json'
         }
       })
-      .then(response => {
-        if (response.ok) {
-          successOverlay.classList.add('active');
-          contactForm.reset();
-        } else {
-          response.json().then(data => {
-            let errorMsg = '';
-            if (data && data.errors) {
-              errorMsg = ' (' + data.errors.map(err => err.message).join(', ') + ')';
-            } else {
-              errorMsg = ' (Status ' + response.status + ')';
-            }
-            triggerEmailFallback(errorMsg);
-          }).catch(() => {
-            triggerEmailFallback(' (Status ' + response.status + ')');
-          });
-        }
-      })
-      .catch(error => {
-        // Network or CORS error
-        triggerEmailFallback(' (Network/CORS error)');
-      });
+        .then(response => {
+          if (response.ok) {
+            successOverlay.classList.add('active');
+            contactForm.reset();
+          } else {
+            response.json().then(data => {
+              let errorMsg = '';
+              if (data && data.errors) {
+                errorMsg = ' (' + data.errors.map(err => err.message).join(', ') + ')';
+              } else {
+                errorMsg = ' (Status ' + response.status + ')';
+              }
+              triggerEmailFallback(errorMsg);
+            }).catch(() => {
+              triggerEmailFallback(' (Status ' + response.status + ')');
+            });
+          }
+        })
+        .catch(error => {
+          // Network or CORS error
+          triggerEmailFallback(' (Network/CORS error)');
+        });
     });
 
     successReset.addEventListener('click', () => {
@@ -2506,4 +2604,5 @@
     });
   </script>
 </body>
+
 </html>
