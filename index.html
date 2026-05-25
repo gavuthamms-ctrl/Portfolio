@@ -93,6 +93,10 @@
       scroll-behavior: smooth;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       background-color: var(--bg-primary);
       color: var(--text-primary);
@@ -248,6 +252,7 @@
     section {
       padding: var(--space-3xl) 0;
       position: relative;
+      overflow: hidden;
     }
 
     .container {
@@ -899,12 +904,7 @@
 
     /* Scrolling Marquee */
     .marquee-container {
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
+      width: 100%;
       background: rgba(15, 25, 35, 0.4);
       border-top: 1px solid var(--border-subtle);
       border-bottom: 1px solid var(--border-subtle);
@@ -1819,7 +1819,7 @@
             <span class="skill-pill">HTML/CSS</span>
             <span class="skill-pill">C/C++</span>
             <span class="skill-pill">MySQL</span>
-            <span class="skill-pill">Cybersecurity</span>
+            <span class="skill-pill">Cybersecurity ↗</span>
           </div>
         </div>
 
@@ -1927,7 +1927,7 @@
           <i class="fa-solid fa-shield-halved"></i>
           <div class="domain-info">
             <h4>Cybersecurity</h4>
-            <p>Currently learning foundational ethical hacking mechanisms, networking rules, and CTF challenges.</p>
+            <p>IBM-certified in Cybersecurity Fundamentals. Actively studying ethical hacking, network security, and applying knowledge through CTF challenges.</p>
           </div>
         </div>
       </div>
@@ -1988,12 +1988,11 @@
             </div>
             <div class="project-spec">
               <strong>The Outcome</strong>
-              <p>A smart evaluation tool that scans text, highlights critical resume deficiencies, and details
-                recommended keywords.</p>
+              <p>Returns a structured gap report in seconds — flagging missing keywords, weak sections, and role-specific improvements to help bypass ATS filters.</p>
             </div>
 
             <div class="project-actions">
-              <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/gavuthamms-ctrl/AI-Resume-Analyser" target="_blank" rel="noopener noreferrer"
                 class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
               <button class="btn btn-primary open-details-btn" data-project="p1">Details <i
                   class="fa-solid fa-arrow-right-long"></i></button>
@@ -2022,8 +2021,7 @@
             </div>
             <div class="project-spec">
               <strong>The Outcome</strong>
-              <p>An eco-friendly dispatch batcher system, offering batched deliveries that significantly cut net exhaust
-                emissions.</p>
+              <p>Clusters nearby deliveries by zone, cutting average route distance by ~30–40% per batch — reducing fuel use and delivery vehicle idle time.</p>
             </div>
 
             <div class="project-badge">
@@ -2031,7 +2029,7 @@
             </div>
 
             <div class="project-actions">
-              <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/gavuthamms-ctrl/Green_Delivery_optimization_system" target="_blank" rel="noopener noreferrer"
                 class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
               <button class="btn btn-primary open-details-btn" data-project="p2">Details <i
                   class="fa-solid fa-arrow-right-long"></i></button>
@@ -2061,8 +2059,7 @@
             </div>
             <div class="project-spec">
               <strong>The Outcome</strong>
-              <p>A smart algorithm that ranks candidate helpers by proximity, response history, and expertise for
-                matching.</p>
+              <p>Automated 3-criteria matching engine (skill, proximity, response rate) — eliminates manual volunteer-task coordination for disaster response teams.</p>
             </div>
 
             <div class="project-badge">
@@ -2070,7 +2067,7 @@
             </div>
 
             <div class="project-actions">
-              <a href="https://github.com/gavuthamms-ctrl" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/gavuthamms-ctrl/Smart-Resource-Allocation" target="_blank" rel="noopener noreferrer"
                 class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
               <button class="btn btn-primary open-details-btn" data-project="p3">Details <i
                   class="fa-solid fa-arrow-right-long"></i></button>
@@ -2088,22 +2085,22 @@
       <div class="modal-strip" id="modalColorStrip"></div>
       <div class="modal-content-wrap">
         <div class="modal-header-section">
-          <span class="tag" id="modalTags">Python</span>
-          <h3 class="modal-title" id="modalTitle">Project Details</h3>
-          <p class="project-one-liner" id="modalOneLiner">One-liner overview</p>
+          <span class="tag" id="modalTags"></span>
+          <h3 class="modal-title" id="modalTitle"></h3>
+          <p class="project-one-liner" id="modalOneLiner"></p>
         </div>
 
         <h4 class="modal-desc-heading">Executive Abstract</h4>
-        <p class="modal-desc-text" id="modalDescription">Full detailed summary...</p>
+        <p class="modal-desc-text" id="modalDescription"></p>
 
         <div class="modal-spec-grid">
           <div class="modal-spec-item">
             <strong>Key Engineering Decision</strong>
-            <p id="modalEngineering">Detailed decision process...</p>
+            <p id="modalEngineering"></p>
           </div>
           <div class="modal-spec-item">
             <strong>Outcome & Impact</strong>
-            <p id="modalOutcome">Quantified metric results...</p>
+            <p id="modalOutcome"></p>
           </div>
         </div>
 
@@ -2134,6 +2131,11 @@
               <h4>Python Programming Fundamentals</h4>
               <p>Issued by: Microsoft Corporation</p>
               <span class="verified-badge"><i class="fa-solid fa-shield-check"></i> Verified</span>
+              <a href="https://coursera.org/verify/4L3ANC8RMJSS" target="_blank" rel="noopener noreferrer"
+                 style="display:inline-flex; align-items:center; gap:5px; font-family:var(--font-mono); font-size:11px; color:var(--accent-primary); margin-top:8px; text-decoration:none; opacity:0.8; transition:opacity 0.2s;"
+                 onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
+                View Certificate <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:9px;"></i>
+              </a>
             </div>
           </div>
 
@@ -2144,6 +2146,11 @@
               <h4>Data Analysis & Visualization in Python</h4>
               <p>Issued by: Microsoft Corporation</p>
               <span class="verified-badge"><i class="fa-solid fa-shield-check"></i> Verified</span>
+              <a href="https://www.coursera.org/account/accomplishments/records/X41JCY052MEF" target="_blank" rel="noopener noreferrer"
+                 style="display:inline-flex; align-items:center; gap:5px; font-family:var(--font-mono); font-size:11px; color:var(--accent-primary); margin-top:8px; text-decoration:none; opacity:0.8; transition:opacity 0.2s;"
+                 onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
+                View Certificate <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:9px;"></i>
+              </a>
             </div>
           </div>
 
@@ -2154,13 +2161,18 @@
               <h4>Cybersecurity Fundamentals</h4>
               <p>Issued by: IBM</p>
               <span class="verified-badge"><i class="fa-solid fa-shield-check"></i> Verified</span>
+              <a href="https://www.credly.com/badges/fc89cce4-68f2-4ed4-a1bd-b4aec0414d4c" target="_blank" rel="noopener noreferrer"
+                 style="display:inline-flex; align-items:center; gap:5px; font-family:var(--font-mono); font-size:11px; color:var(--accent-primary); margin-top:8px; text-decoration:none; opacity:0.8; transition:opacity 0.2s;"
+                 onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
+                View Badge <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:9px;"></i>
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Hackathons Column -->
         <div class="hacks-col">
-          <h3 class="hackathons-title"><i class="fa-solid fa-laptop-code"></i> Hackathons & Events</h3>
+          <h3 class="hackathons-title"><i class="fa-solid fa-laptop-code"></i> Hackathons & Events <span style="font-family:var(--font-mono); font-size:13px; color:var(--text-secondary); font-weight:400; margin-left:10px;">3 events</span></h3>
 
           <!-- Hack 1 -->
           <div class="card hack-card">
@@ -2170,8 +2182,9 @@
             </div>
             <h4>TNIMPACT Hackathon</h4>
             <p class="hack-project">
-              Pioneered route consolidation algorithms within the <strong>Green Delivery Optimization</strong> platform,
-              earning key commendations for operational logistics solutions.
+              Built a geographic batching system for <strong>Green Delivery
+              Optimization</strong> — reducing average route distance by ~35% per
+              delivery zone. Selected for recognition at this state-level government event.
             </p>
           </div>
 
@@ -2183,8 +2196,23 @@
             </div>
             <h4>Build With AI Hackathon</h4>
             <p class="hack-project">
-              Designed state-of-the-art dispatch protocols for <strong>Smart Resource Allocation</strong>, applying NLP
-              parsing to map live volunteer inputs to disaster needs.
+              Built a 3-criteria ML matching engine for <strong>Smart Resource
+              Allocation</strong> — auto-assigning volunteers by skill, proximity, and
+              response history. Built during Google × Hack2Skill's AI Hackathon.
+            </p>
+          </div>
+
+          <!-- Hack 3 — Samsung For Tomorrow -->
+          <div class="card hack-card">
+            <div class="hack-header">
+              <span class="hack-org">Samsung India</span>
+              <span class="hack-type">Innovation Challenge</span>
+            </div>
+            <h4>Samsung For Tomorrow</h4>
+            <p class="hack-project">
+              Participated in Samsung's national innovation challenge — building a
+              technology-driven solution aimed at creating meaningful social and
+              environmental impact for tomorrow's communities.
             </p>
           </div>
         </div>
@@ -2452,32 +2480,32 @@
       p1: {
         title: "AI Resume Analyser",
         oneLiner: "Gives your resume an honest, structured second opinion.",
-        tags: "Python &middot; AI &middot; NLP &middot; Streamlit",
+        tags: "Python · AI · NLP · Streamlit",
         description: "A machine-learning resume scanner designed to eliminate selection uncertainty. When users upload their profiles, the tool extracts, structures, and processes raw PDF text, benchmarking credentials against customized tech career keyword clusters. It calculates exact skill gap ratios, isolates core grammatical/composition improvements, and scores layout scannability so job applicants can bypass system filters successfully.",
         engineering: "Implemented custom NLP parsing engines to normalize complex resume tables and dual-column layouts into flat string models. Optimized semantic analysis using localized skill corpus dictionaries to bypass high-cost third-party API dependencies.",
-        outcome: "Delivers highly detailed resume gap analysis with clear recommendations. Users can iteratively adjust their wording and monitor structural improvement in real-time.",
+        outcome: "Returns a structured gap report in seconds — flagging missing role-specific keywords, weak experience sections, and formatting issues. Users re-test iteratively in real time.",
         stripClass: "p1-strip",
-        github: "https://github.com/gavuthamms-ctrl"
+        github: "https://github.com/gavuthamms-ctrl/AI-Resume-Analyser"
       },
       p2: {
         title: "Green Delivery Optimizer",
         oneLiner: "Smarter routing that saves fuel and the planet.",
-        tags: "Python &middot; Algorithm &middot; Optimization &middot; Maps API",
+        tags: "Python · Algorithm · Optimization · Maps API",
         description: "Developed specifically as a sustainable transit dispatch solution, this platform tackles urban freight logistics issues. Instead of processing deliveries in chronological orders, the routing software clusters delivery targets into dense geospatial neighborhoods. By introducing an eco-friendly 'Green Delivery' tier, the platform batches routes together, lowering truck engine runtimes, reducing exhaust gas footprints, and saving operational fleet fuel costs.",
         engineering: "Designed a localized spatial clustering algorithm grouping delivery coordinates by geographic proximity before route optimization, optimizing batch routes and reducing total distance traveled per vehicle.",
-        outcome: "Highly optimized routing that balances practical delivery speeds with ecological responsibility. Featured and commended at the state-level TNIMPACT Hackathon.",
+        outcome: "Cuts average delivery route distance by ~30–40% per zone through geographic batching. Reduces fuel consumption and vehicle idle time per run. Featured at TNIMPACT Hackathon.",
         stripClass: "p2-strip",
-        github: "https://github.com/gavuthamms-ctrl"
+        github: "https://github.com/gavuthamms-ctrl/Green_Delivery_optimization_system"
       },
       p3: {
         title: "Smart Resource Allocator",
         oneLiner: "The right volunteer for the right task — automatically.",
-        tags: "Python &middot; ML &middot; Matching &middot; Algorithm",
+        tags: "Python · ML · Matching · Algorithm",
         description: "Built to streamline resource mobilization for community relief groups. Disaster response coordinators face extreme chaos allocating hundreds of general volunteers to urgent medical, structural, and transport tasks. This ML-driven application maps incoming distress tickets, scores volunteer profiles on skill compatibility, availability timelines, and real-time transit distance, and automatically outputs optimal task assignments.",
         engineering: "Created an advanced matching scoring model weighting structural skill alignment, geographic proximity, and helper response ratings, effectively reducing disaster task misallocation.",
-        outcome: "Significantly decreased coordination delay overhead, ensuring critical tasks are assigned to volunteers with the matching skill sets.",
+        outcome: "Automates volunteer-task matching across 3 scored criteria — skill alignment, geographic proximity, and response history. Eliminates manual assignment overhead for NGO coordinators.",
         stripClass: "p3-strip",
-        github: "https://github.com/gavuthamms-ctrl"
+        github: "https://github.com/gavuthamms-ctrl/Smart-Resource-Allocation"
       }
     };
 
@@ -2502,7 +2530,7 @@
         // Reset and apply styles
         modalColorStrip.className = 'modal-strip ' + data.stripClass;
         modalTags.innerHTML = data.tags.split('&middot;')[0]; // First tag or simple formatted
-        modalTags.textContent = data.tags.replace(/&middot;/g, ' · ');
+        modalTags.textContent = data.tags;
         modalTitle.textContent = data.title;
         modalOneLiner.textContent = data.oneLiner;
         modalDescription.textContent = data.description;
